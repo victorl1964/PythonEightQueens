@@ -16,6 +16,7 @@ Introduzca un entero para indicar el tamaño del TABLERO: 8
 Introduzca COLUMNA para REINA en 1era FILA (0 <= COLUMNA < 8): 7
 
 La primera REINA va en la  FILA 0, COLUMNA 7
+```
             [7 1 3 0 6 4 2 5]
             -----------------
             * * * * * * * R 
@@ -60,3 +61,4 @@ La primera REINA va en la  FILA 0, COLUMNA 7
             * * * * * * R * 
             * * * * R * * * 
             -----------------
+```
