@@ -1,30 +1,32 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# 1) La descripción del PROBLEMA OCHO REINAS se encuentra en la versión 1
+# 1) Descripción del PROBLEMA
+
+# Este programa se encarga de encontrar una solución al probrema de las Ocho
+# REINAS, que consiste en colocar 1 REINA en cada fila del tablero (matriz 8x8)
+# sin que ninguna REINA pueda atacar a otra. Para ello:
 #
-# 2) En esta versión, generalizamos el problema a un TABLERO de M filas y COLUMNAS
+# 1.- Generaremos un múmero RANDOM entre 0 y 7, para colocar una reina en
+# una columna de la 1era fila de la matriz
+#
+# 2.- A partir de la 2da fila, desde la primera columna, buscaremos si hay
+# alguna REINA en direcciones NorOESTE, NORTE y NorESTE. En caso negativo
+# (NO HAY REINAS), colocamos una REINA en esa fila/columna, de lo contrario,
+# avanzamos de columna ...
+# Nota: no se busca en direcciones:
+# -oeste
+# -este
+# -sur
+# -sureste
+# -suroeste
+#.............porque el algoritmo no puede haber puesto una REINA en ellas
+#
+# 3) En esta solución el problema se extiende a un TABLERO de M filas y COLUMNAS
 # M>=2
 #
-# 3) UNA SOLUCION MAS EFICIENTE que la implementada en OchoReinasV4
-#    a) dos reinas no deben compartir la misma diagonal
-#    b) dos reinas no deben compartir la misma columna
-#
-#    Para verificar si dos reinas comparten la misma diagonal se hace lo sig:
-#    i es la fila o posición del arreglo donde quiero colocar una REINA en una columna (j)
-#    k es cualquier fila < i (las ocupadas hasta ahora)
-#
-#    si abs(i-k) == abs (j-SOLUTIONf[k]) entonces
-#          las reinas en las posiciones i y k comparten la misma diagonal
-#    ejemplo:
-#    La solucion
-#        0,2,4,6,1,3,5,7 no es viable porque para i=0, j=7
-#            j-i = 7, y SOLUTIONf[j]-SOLUTIONf[i]=7
-#    Luego, al intentar  colocar una columna en una posición del
-#    arreglo, se debe verificar,contra todas las posiciones
-#    anteriores:
-#          Que no compartan la misma diagonal :
-#          Que no compartan la misma columna  :
+# 4) Muestra todas las soluciones encontradas cuando una reina se coloca en
+#    la posición determinada en 1)
 #
 import numpy as arreglo
 import math
