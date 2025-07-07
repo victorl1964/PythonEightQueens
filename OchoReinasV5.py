@@ -77,7 +77,7 @@ while columna < 0 or columna > M-1:
     columna=int(input("COLUMNA fuera de rango...Introduzca otro número :"))
 
 print ("La primera REINA va en la  FILA 0, COLUMNA " + str(columna))
-t0 = time.clock()
+
 
 #
 #CREAMOS LOS ARREGLOS DONDE MANTENDREMOS LA SOLUCIÓN PARCIAL.
@@ -119,6 +119,5 @@ while i > 0 and i < M:
         FILAS[i]=-1
 
 
-t1 = time.clock()
-print("TIEMPO TOTAL {0:.4f} SEGUNDOS...".format(t1-t0))
+
 
